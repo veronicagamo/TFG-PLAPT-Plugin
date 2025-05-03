@@ -4,8 +4,6 @@
 ========================================
 PLAPT Scipion Plugin
 ========================================
-**Documentation under development, sorry for the inconvenience**
-
 Scipion framework plugin for ligand–protein affinity prediction using the PLAPT deep learning model.
 
 ========================================
