@@ -1,19 +1,19 @@
 .. |organization| replace:: scipion-chem
-.. |repository| replace:: scipion-chem-retrosynthesis
+.. |repository| replace:: scipion-chem-plapt
 
 ========================================
-Retrosynthesis scipion plugin
+PLAPT Scipion Plugin
 ========================================
 **Documentation under development, sorry for the inconvenience**
-Scipion framework plugin for the use of retrosynthesis software tools.
-  
+
+Scipion framework plugin for ligand–protein affinity prediction using the PLAPT deep learning model.
+
 ========================================
 Install this plugin
 ========================================
-You will need to use `Scipion3 <https://scipion-em.github.io/docs/docs/scipion
--modes/how-to-install.html>`_ to run these protocols.
+You will need to use `Scipion3 <https://scipion-em.github.io/docs/docs/scipion-modes/how-to-install.html>`_ to run these protocols.
 
-Aizynthfinder, is installed automatically by Scipion.
+PLAPT and its dependencies are installed automatically by the plugin.
 
 - **Install the stable version**
 
@@ -25,56 +25,56 @@ Aizynthfinder, is installed automatically by Scipion.
 
     scipion3 installp -p \ |repository|\ 
 
-
 - **Developer's version**
 
     1. Download repository:
 
     .. parsed-literal::
 
-        git clone \https://github.com/\ |organization|\ /\ |repository|\ .git
+        git clone https://github.com/\ |organization|\ /\ |repository|\ .git
 
     2. Install:
 
     .. parsed-literal::
 
         scipion3 installp -p /path/to/\ |repository|\  --devel
-  
+
 ========================================
 Protocols
 ========================================
 This plugin contains the following protocols:
 
-**None for now**
+- **PLAPT Analysis**: Predict ligand–protein affinity based on a single sequence and a set of small molecules.
 
 ========================================
-Packages & enviroments
+Packages & environments
 ========================================
 Packages installed by this plugin can be located in ``/path/to/scipion/software/em/``.
 
 The following packages will be created:
 
-- aizynthfinder-``version``
+- plapt-``version``
 
-Where ``version`` is the current version of that specific package.
+Where ``version`` is the current version of the PLAPT package.
 
-Also, the following conda enviroments will be created:
+Also, the following conda environments will be created:
 
-- aizynthfinder-``version``
+- plapt-``version``
 
-As of today, Scipion does not automatically uninstall the conda enviroments created in the installation process when uninstalling a plugin, so keep this list in mind if you want to clean up some disk space if you need to uninstall this one.
+As of today, Scipion does not automatically uninstall the conda environments created during plugin installation, so you may need to remove these manually if uninstalling the plugin.
 
 ========================================
 External software
 ========================================
 This plugin integrates the following software:
   
-.. _aizynthfinder: https://github.com/MolecularAI/aizynthfinder
-.. |aizynthfinder| replace:: **Aizynthfinder** 
+.. _plapt: https://github.com/DIFACQUIM/plapt
+.. |plapt| replace:: **PLAPT** 
 
-- |aizynthfinder|_: Tool for retrosynthetic planning.
+- |plapt|_: Deep learning model for protein–ligand binding affinity prediction from sequence and SMILES.
 
 ========================================
 Changelog
 ========================================
-All the recent version changes can be found `here <https://github.com/scipion-chem/scipion-chem-retrosynthesis/blob/devel/CHANGES.rst>`_.
+All recent version changes can be found `here <https://github.com/scipion-chem/scipion-chem-plapt/blob/devel/CHANGES.rst>`_.
+
